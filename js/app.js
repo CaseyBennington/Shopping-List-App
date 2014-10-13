@@ -1,4 +1,29 @@
 $(document).ready(function(){
+	var flag = 0;
+// click on ice machine to play sound
+	$("#ice-box").on('click', function(){
+		playIce();
+	});
+
+// click on board to launch list application
+	$("#board-trigger").on('click', function(){
+		var clickedElement = $("#board");
+		if (flag==0) {
+			//clickedElement.css({display: "inline"});
+			flag=1;
+			//clickedElement.animate({
+				clickedElement.show("slow");
+			//});
+			return;
+		}
+		if (flag==1){
+			//clickedElement.css({display: "none"});
+			clickedElement.hide("slow");
+			flag=0;
+			return;
+		}
+	});
+
 // use enter to add list items
 	$('#new-list-item').keyup(function(event){
 		if(event.keyCode == 13) {
@@ -50,6 +75,8 @@ $(document).ready(function(){
 // mark as completed
 	$("#list").on('click', '.check-mark', function() {
 		  $(this).parent().find("p").toggleClass("completed");
+		  $(this).parent().find(".check-mark").toggleClass("completed");
+		  $(this).parent().find(".check-mark").toggleClass("listHover");
 	});
 
 // remove list item
@@ -60,3 +87,9 @@ $(document).ready(function(){
 //sortable list items
 	$('#list').sortable({ axis: "y" });
 });
+
+function playIce () {
+	$('#ice-sound')[0].volume = 0.75;
+	$('#ice-sound')[0].load();
+	$('#ice-sound')[0].play();
+}
