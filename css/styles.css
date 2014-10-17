@@ -36,7 +36,6 @@ body {
 	position: absolute;
 	height: 15%;
 	width: 11%;
-	min-width: 11%;
 	background:rgba(255,255,255, 0.0);
 	background-image: url('../images/board2.png');
 	background-repeat: no-repeat;
