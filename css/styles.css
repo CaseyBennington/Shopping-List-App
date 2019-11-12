@@ -4,7 +4,7 @@
 }
 body {
 	background-color: white;
-	background-image: url('./images/fridge1.jpg');
+	background-image: url('../images/fridge1.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-moz-background-size: cover;
@@ -37,7 +37,7 @@ body {
 	height: 15%;
 	width: 11%;
 	background:rgba(255,255,255, 0.0);
-	background-image: url('./images/board2.png');
+	background-image: url('../images/board2.png');
 	background-repeat: no-repeat;
 	-moz-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -54,7 +54,7 @@ body {
 }
 #board {
 	background:rgba(255,255,255, 0.0);
-	background-image: url('./images/board2.png');
+	background-image: url('../images/board2.png');
 	background-repeat: no-repeat;
 	-moz-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
